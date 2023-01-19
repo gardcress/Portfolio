@@ -1,38 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
 .App {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+    background-image: url("https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* @media only screen and (max-device-width: 800px), screen and (max-device-height: 500px) {
+    .App {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0px;
+        left: 0px;
+        z-index: 1000;
+        background-image: url("https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+} */
+
+.startButtonContainer{
+  margin-top: 30vh;
   text-align: center;
+  transition: .3s;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.startButtonContainer:hover {
+  transform: scale(1.4);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+img.startButton{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+h1.startButton {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  /* font-family: 'Comfortaa', cursive; */
+  font-family: 'Dancing Script', cursive;
+  font-size: 4em;
   color: white;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+/* transition: .3s;
+transform: scale(1.2); */
+
+.startButton:hover{
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
+.fade{
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s linear;
+}
+
+.fadeout{
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 1s, opacity 1s linear;
+}
+
+
+
+
+
+
+
+
+/* Keyframes */
+@keyframes spin {
   from {
-    transform: rotate(0deg);
+      transform:rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+      transform:rotate(360deg);
   }
 }
