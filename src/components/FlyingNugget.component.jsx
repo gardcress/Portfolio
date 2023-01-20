@@ -9,50 +9,21 @@ function FlyingNugget(props) {
     const [deathTopPosition, setDeathTopPosition] = useState(0);
     const [leftPosition, setLeftPosition] = useState(Math.floor(Math.random() * props.dimensions.width));
     const [deathLeftPosition, setDeathLeftPosition] = useState(0);
+    const [degree, setDegree] = useState(0);
 
     function nuggetOnClick(event) {
-        setNuggetLife(false);
+        console.log(event);
         setDeathTopPosition(event.clientY)
-        setDeathLeftPosition(event.clientX)
+        setDeathLeftPosition(event.clientX - 48)
+        setNuggetLife(false);
+        setDegree(Math.floor(Math.random() * 360));
     }
+
+
 
     useEffect(() => {
         const interval = setInterval(function () {
-            let leftSpeed = Math.floor(Math.random() * (props.dimensions.width * 0.3));
-            let topSpeed = Math.floor(Math.random() * (props.dimensions.height * 0.3));
-
-            if(leftPosition + leftSpeed > props.dimensions.width){
-                setLeftPosition(leftPosition - leftSpeed)
-            }
-            else if(leftPosition - leftSpeed < 0){
-                setLeftPosition(leftPosition + leftSpeed)
-            }
-            else{
-                const randomizer = Math.floor(Math.random() * 2);
-                if(randomizer === 0){
-                    setLeftPosition(leftPosition + leftSpeed)
-                }
-                else{
-                    setLeftPosition(leftPosition - leftSpeed)
-                }
-            }
-
-            if(topPosition + topSpeed > props.dimensions.height){
-                setTopPosition(topPosition - topSpeed)
-            }
-            else if(topPosition - topSpeed < 0){
-                setTopPosition(topPosition + topSpeed)
-            }
-            else{
-                const randomizer = Math.floor(Math.random() * 2);
-                if(randomizer === 0){
-                    setTopPosition(topPosition + topSpeed)
-                }
-                else{
-                    setTopPosition(topPosition - topSpeed)
-                }
-            }
-
+            setNewTargetPosition();
         }, 3000);
         if (isNuggetAlive === false) {
             clearInterval(interval);
@@ -62,14 +33,61 @@ function FlyingNugget(props) {
         }
     })
 
-    return (
-        <span>
-            {isNuggetAlive === true ?
-                <img src={nuggetImageAlive} className='grayNugget rightNuggetSpin' alt='A gray nugget' onClick={nuggetOnClick}
-                    style={{ cursor: "pointer", top: topPosition + "px", left: leftPosition + "px" }}></img> :
-                <img src={nuggetImageDead} className='grayNugget hideOnStart' alt='A gray dead nugget'
-                    style={{ top: deathTopPosition + "px", left: deathLeftPosition + "px", transition: "none" }}></img>
+    useEffect(() => {
+        setNewTargetPosition();
+    }, []);
+
+    function setNewTargetPosition() {
+        let leftSpeed = Math.floor(Math.random() * (props.dimensions.width * 0.5));
+        let topSpeed = Math.floor(Math.random() * (props.dimensions.height * 0.5));
+
+        if (leftPosition + leftSpeed > props.dimensions.width) {
+            setLeftPosition(leftPosition - leftSpeed)
+        }
+        else if (leftPosition - leftSpeed < 0) {
+            setLeftPosition(leftPosition + leftSpeed)
+        }
+        else {
+            const randomizer = Math.floor(Math.random() * 2);
+            if (randomizer === 0) {
+                setLeftPosition(leftPosition + leftSpeed)
             }
+            else {
+                setLeftPosition(leftPosition - leftSpeed)
+            }
+        }
+
+        if (topPosition + topSpeed > props.dimensions.height) {
+            setTopPosition(topPosition - topSpeed)
+        }
+        else if (topPosition - topSpeed < 0) {
+            setTopPosition(topPosition + topSpeed)
+        }
+        else {
+            const randomizer = Math.floor(Math.random() * 2);
+            if (randomizer === 0) {
+                setTopPosition(topPosition + topSpeed)
+            }
+            else {
+                setTopPosition(topPosition - topSpeed)
+            }
+        }
+    }
+
+    
+
+    if (!isNuggetAlive) {
+        return (
+            <span>
+                <img src={nuggetImageDead} className='grayNugget hideOnStart' alt='A gray dead nugget'
+                    style={{ top: deathTopPosition + "px", left: deathLeftPosition + "px", transition: "none", transform: "rotate(" + degree + "deg)" }}></img>
+            </span>
+        );
+    }
+    return (
+        <span className='grayNugget'>
+            <img src={nuggetImageAlive} className='grayNugget rightNuggetSpin' alt='A gray nugget' onMouseOver={nuggetOnClick}
+                style={{ cursor: "pointer", top: topPosition + "px", left: leftPosition + "px" }}></img>
         </span>
     );
 }

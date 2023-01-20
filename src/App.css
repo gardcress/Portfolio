@@ -90,9 +90,10 @@ transform: scale(1.2); */
 }
 
 .hideNuggetsOnStart {
-  animation: fadeIn ease 10s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
+    animation: fadeIn ease 10s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    height: 0;
 }
 
 .defaultFont {
@@ -100,8 +101,8 @@ transform: scale(1.2); */
 }
 
 .navbar {
-  margin-top: 10px;
-  text-align: center;
+    margin-top: 10px;
+    text-align: center;
 }
 
 .navButton {
@@ -123,23 +124,27 @@ transform: scale(1.2); */
     background-size: 80% 4px;
 }
 
-
-.grayNugget{
-  position: fixed;
-  width: 5vh;
-  height: 5vh;
-  transition: all 3s linear;
-  z-index: 1000;
+.grayNugget {
+    position: fixed;
+    width: 5vh;
+    height: 5vh;
+    transition: all 3s linear;
+    z-index: -1;
 }
 
 .rightNuggetSpin {
-  animation-name: rightSpin;
-  animation-duration: 3000ms;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+    animation-name: rightSpin;
+    animation-duration: 3000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 
-
+span.grayNugget {
+    /* width: fit-content; */
+    animation: fadeIn ease 10s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
 
 
 /* Keyframes */

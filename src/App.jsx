@@ -44,7 +44,15 @@ function App() {
   // Main app
   return (
     <div className="App">
-      <div className="hideNuggetsOnStart">
+      <div>
+      <FlyingNugget dimensions={windowDimensions}></FlyingNugget>
+      <FlyingNugget dimensions={windowDimensions}></FlyingNugget>
+      <FlyingNugget dimensions={windowDimensions}></FlyingNugget>
+      <FlyingNugget dimensions={windowDimensions}></FlyingNugget>
+      <FlyingNugget dimensions={windowDimensions}></FlyingNugget>
+      <FlyingNugget dimensions={windowDimensions}></FlyingNugget>
+      <FlyingNugget dimensions={windowDimensions}></FlyingNugget>
+      <FlyingNugget dimensions={windowDimensions}></FlyingNugget>
       <FlyingNugget dimensions={windowDimensions}></FlyingNugget>
       <FlyingNugget dimensions={windowDimensions}></FlyingNugget>
       <FlyingNugget dimensions={windowDimensions}></FlyingNugget>
