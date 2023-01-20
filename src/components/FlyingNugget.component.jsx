@@ -12,7 +12,6 @@ function FlyingNugget(props) {
     const [degree, setDegree] = useState(0);
 
     function nuggetOnClick(event) {
-        console.log(event);
         setDeathTopPosition(event.clientY)
         setDeathLeftPosition(event.clientX - 48)
         setNuggetLife(false);
@@ -31,13 +30,14 @@ function FlyingNugget(props) {
         return () => {
             clearInterval(interval)
         }
-    })
+    }, [topPosition, leftPosition])
 
     useEffect(() => {
         setNewTargetPosition();
     }, []);
 
     function setNewTargetPosition() {
+
         let leftSpeed = Math.floor(Math.random() * (props.dimensions.width * 0.5));
         let topSpeed = Math.floor(Math.random() * (props.dimensions.height * 0.5));
 
@@ -79,14 +79,14 @@ function FlyingNugget(props) {
     if (!isNuggetAlive) {
         return (
             <span>
-                <img src={nuggetImageDead} className='grayNugget hideOnStart' alt='A gray dead nugget'
+                <img src={nuggetImageDead} className='grayNugget hideOnStart unselectable' alt='A gray dead nugget'
                     style={{ top: deathTopPosition + "px", left: deathLeftPosition + "px", transition: "none", transform: "rotate(" + degree + "deg)" }}></img>
             </span>
         );
     }
     return (
         <span className='grayNugget'>
-            <img src={nuggetImageAlive} className='grayNugget rightNuggetSpin' alt='A gray nugget' onMouseOver={nuggetOnClick}
+            <img src={nuggetImageAlive} className='grayNugget rightNuggetSpin unselectable' alt='A gray nugget' onMouseOver={nuggetOnClick}
                 style={{ cursor: "pointer", top: topPosition + "px", left: leftPosition + "px" }}></img>
         </span>
     );

@@ -1,16 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 .App {
-    position: fixed;
+    /* position: fixed; */
     width: 100vw;
-    height: 100vh;
+    height: fit-content;
+    min-height: 100vh;
     top: 0px;
     left: 0px;
     z-index: 1000;
-    background-image: url("https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80");
+    /* background-image: url("https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80"); */
+    
+    overflow: hidden;
+}
+
+body {
+    /* overflow: hidden; */
+    background-image: url("https://cdn.pixabay.com/photo/2020/11/06/18/53/flowers-5718624_960_720.png");
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;
 }
+
+body::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
 
 
 /* @media only screen and (max-device-width: 800px), screen and (max-device-height: 500px) {
@@ -26,6 +42,9 @@
         background-size: cover;
     }
 } */
+
+
+/*************** STARTSCREEN ****************/
 
 .startButtonContainer {
     margin-top: 30vh;
@@ -64,6 +83,9 @@ h1.startButton {
 }
 
 
+/*************** MISC ****************/
+
+
 /* transition: .3s;
 transform: scale(1.2); */
 
@@ -100,6 +122,16 @@ transform: scale(1.2); */
     font-family: 'Dancing Script', cursive;
 }
 
+.unselectable {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/*************** NAVBAR ****************/
+
 .navbar {
     margin-top: 10px;
     text-align: center;
@@ -119,17 +151,31 @@ transform: scale(1.2); */
     /* border-radius: 50px; */
 }
 
+.navFlagButton {
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    transition: .3s;
+    margin-bottom: 8px;
+}
+
+.navFlagButton:hover {
+    transform: scale(1.2);
+}
+
 .navButton:hover {
     background-position: 50% 90%;
     background-size: 80% 4px;
 }
+
+
+/*************** NUGGETS ****************/
 
 .grayNugget {
     position: fixed;
     width: 5vh;
     height: 5vh;
     transition: all 3s linear;
-    z-index: -1;
 }
 
 .rightNuggetSpin {
@@ -144,6 +190,42 @@ span.grayNugget {
     animation: fadeIn ease 10s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    z-index: 1;
+}
+
+
+/*************** CONTENT ****************/
+
+.textContainer {
+    position: relative;
+    margin-top: 20px;
+    font-family: 'Comfortaa', cursive;
+    text-align: center;
+    background-color: beige;
+    left: 50%;
+    width: 50vw;
+    height: fit-content;
+    padding: 8px;
+    border-radius: 10px;
+    opacity: 0.9;
+    animation: 1s slide-right;
+    border: 1px solid;
+    border-width: 5px 4px;
+    border-color:darkgrey;
+    border-radius:95% 1vw 95% 1vw/1vw 95% 1vw 95%;
+    transform: translateX(-50%);
+
+
+}
+
+.textContent {
+
+}
+
+.categoryContainer {
+    height: fit-content;
+    width: 100%;
+    margin-bottom: 25px;
 }
 
 
@@ -164,5 +246,15 @@ span.grayNugget {
     }
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes slide-right {
+    from {
+        left: 0%;
+    }
+    to {
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
