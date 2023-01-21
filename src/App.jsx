@@ -4,6 +4,7 @@ import StartButton from './components/StartButton.component';
 import NavButton from './components/NavButton.component';
 import FlyingNugget from './components/FlyingNugget.component';
 import { sv, en } from './lang.js'
+import Category from './components/Category.component';
 
 function App() {
   // Get width and height of viewport
@@ -32,6 +33,7 @@ function App() {
     console.log("App closed");
   }
 
+  // Can add here a section to make it not reset on lang change
   function langHandler() {
     if (lang.root === "en") {
       setLang(sv);
@@ -61,17 +63,40 @@ function App() {
 
   // Generate category
   function generateCategory() {
-    console.log("generating category..")
-    console.log(category)
-    console.log(lang.education)
     if (category === lang.education) {
+      const education = [
+        { title: lang.schools.uniCourses_title, desc: lang.schools.uniCourses_desc },
+        { title: lang.schools.highSchoolTitle, desc: lang.schools.highSchoolDesc },
+      ]
       return (
-        <div className='categoryContainer'>
-          <div className='textContainer'>
-            <h1 className='textContent'>{lang.schools.highSchoolTitle}</h1>
-            {lang.schools.highSchoolDesc}
-          </div>
-        </div>
+        <Category textInput={education}></Category>
+      );
+    }
+    if (category == lang.work) {
+      const work = [
+        { title: lang.jobs.job4_title, desc: lang.jobs.job4_desc },
+        { title: lang.jobs.job3_title, desc: lang.jobs.job3_desc },
+        { title: lang.jobs.job2_title, desc: lang.jobs.job2_desc },
+        { title: lang.jobs.job1_title, desc: lang.jobs.job1_desc },
+      ]
+      return (
+        <Category textInput={work}></Category>
+      );
+    }
+    if (category == lang.hobby) {
+      const hobby = [
+        { title: lang.hobbies.porfolio_title, desc: lang.hobbies.porfolio_desc },
+      ]
+      return (
+        <Category textInput={hobby}></Category>
+      );
+    }
+    if (category == lang.otherlinks) {
+      const links = [
+        { title: <a href='https://github.com/Tropae' target="_blank">{lang.github}</a>, desc: "" },
+      ]
+      return (
+        <Category textInput={links}></Category>
       );
     }
   }
@@ -96,8 +121,6 @@ function App() {
         <FlyingNugget dimensions={windowDimensions}></FlyingNugget>
       </div>
       <div className="hideOnStart">
-
-
         <div className='navbar'>
           <NavButton text="Kevin Jäger" className="defaultFont navButton" style={{ backgroundSize: "0", marginTop: "10px", cursor: "default" }}></NavButton>
           {lang.root === "en" ?
@@ -112,19 +135,9 @@ function App() {
           <NavButton text={lang.hobby} style={{ color: "cornflowerblue", backgroundImage: "linear-gradient(cornflowerblue 0 0)" }} onClick={categoryHandler}></NavButton>
           <NavButton text={lang.otherlinks} style={{ color: "black", backgroundImage: "linear-gradient(black 0 0)" }} onClick={categoryHandler}></NavButton>
         </div>
-
-
         {generateCategory()}
 
-
-
-
-
-
-
         {/* <button onClick={closeApp}>Close App</button> */}
-
-
         {/* <button onClick={langHandler}>Change Lang</button> */}
       </div>
     </div>
