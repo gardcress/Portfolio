@@ -24,13 +24,10 @@ function App() {
 
   function openApp() {
     setIsAppOpen(true);
-    console.log("App opened");
-
   }
 
   function closeApp() {
     setIsAppOpen(false);
-    console.log("App closed");
   }
 
   // Can add here a section to make it not reset on lang change
@@ -44,8 +41,13 @@ function App() {
   }
 
   function categoryHandler(event) {
-    setCategory(event.target.innerText);
-    // console.log(category)
+    const newCategory = event.target.innerText;
+    if(newCategory === category){
+      setCategory("none");
+    }
+    else{
+      setCategory(event.target.innerText);
+    }
   }
 
 
@@ -63,7 +65,16 @@ function App() {
 
   // Generate category
   function generateCategory() {
-    if (category === lang.education) {
+    if (category == "none") {
+      const welcome = [
+        { title: lang.welcome_title, desc: lang.welcome_desc },
+        { title: lang.welcome_title_2, desc: "" },
+      ]
+      return (
+        <Category textInput={welcome}></Category>
+      );
+    }
+    if (category === en().education || category === sv().education) {
       const education = [
         { title: lang.schools.uniCourses_title, desc: lang.schools.uniCourses_desc },
         { title: lang.schools.highSchoolTitle, desc: lang.schools.highSchoolDesc },
@@ -72,7 +83,7 @@ function App() {
         <Category textInput={education}></Category>
       );
     }
-    if (category == lang.work) {
+    if (category === en().work || category === sv().work) {
       const work = [
         { title: lang.jobs.job4_title, desc: lang.jobs.job4_desc },
         { title: lang.jobs.job3_title, desc: lang.jobs.job3_desc },
@@ -83,7 +94,7 @@ function App() {
         <Category textInput={work}></Category>
       );
     }
-    if (category == lang.hobby) {
+    if (category === en().hobby || category === sv().hobby) {
       const hobby = [
         { title: lang.hobbies.porfolio_title, desc: lang.hobbies.porfolio_desc },
       ]
@@ -91,7 +102,7 @@ function App() {
         <Category textInput={hobby}></Category>
       );
     }
-    if (category == lang.otherlinks) {
+    if (category === en().otherlinks || category === sv().otherlinks) {
       const links = [
         { title: <a href='https://github.com/Tropae' target="_blank">{lang.github}</a>, desc: "" },
       ]
