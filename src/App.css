@@ -175,7 +175,7 @@ transform: scale(1.2); */
     position: fixed;
     width: 5vh;
     height: 5vh;
-    transition: all 3s linear;
+    transition: all 6s linear;
 }
 
 .rightNuggetSpin {

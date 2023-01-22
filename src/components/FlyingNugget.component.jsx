@@ -23,7 +23,7 @@ function FlyingNugget(props) {
     useEffect(() => {
         const interval = setInterval(function () {
             setNewTargetPosition();
-        }, 3000);
+        }, 6000);
         if (isNuggetAlive === false) {
             clearInterval(interval);
         }
@@ -38,8 +38,8 @@ function FlyingNugget(props) {
 
     function setNewTargetPosition() {
 
-        let leftSpeed = Math.floor(Math.random() * (props.dimensions.width * 0.5));
-        let topSpeed = Math.floor(Math.random() * (props.dimensions.height * 0.5));
+        let leftSpeed = Math.floor(Math.random() * (props.dimensions.width * 0.8));
+        let topSpeed = Math.floor(Math.random() * (props.dimensions.height * 0.8));
 
         if (leftPosition + leftSpeed > props.dimensions.width) {
             setLeftPosition(leftPosition - leftSpeed)

@@ -68,7 +68,7 @@ function App() {
     if (category == "none") {
       const welcome = [
         { title: lang.welcome_title, desc: lang.welcome_desc },
-        { title: lang.welcome_title_2, desc: "" },
+        { title: "", desc: lang.welcome_title_2 },
       ]
       return (
         <Category textInput={welcome}></Category>
