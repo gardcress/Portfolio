@@ -5,9 +5,10 @@ import { useState, useEffect } from 'react';
 
 function FlyingNugget(props) {
     const [isNuggetAlive, setNuggetLife] = useState(true);
-    const [topPosition, setTopPosition] = useState(Math.floor(Math.random() * props.dimensions.height));
+    const [topPosition, setTopPosition] = useState(-(Math.floor(Math.random() * props.dimensions.height)));
+    // const [topPosition, setTopPosition] = useState(0);
     const [deathTopPosition, setDeathTopPosition] = useState(0);
-    const [leftPosition, setLeftPosition] = useState(Math.floor(Math.random() * props.dimensions.width));
+    const [leftPosition, setLeftPosition] = useState(0);
     const [deathLeftPosition, setDeathLeftPosition] = useState(0);
     const [degree, setDegree] = useState(0);
 
