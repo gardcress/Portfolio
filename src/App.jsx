@@ -104,7 +104,7 @@ function App() {
     }
     if (category === en().otherlinks || category === sv().otherlinks) {
       const links = [
-        { title: <a href='https://github.com/Tropae' target="_blank">{lang.github}</a>, desc: "" },
+        { title: <a href='https://github.com/Kevcodejr' target="_blank">{lang.github}</a>, desc: "" },
       ]
       return (
         <Category textInput={links}></Category>
