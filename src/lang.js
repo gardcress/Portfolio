@@ -1,87 +1,50 @@
 export function sv(){
-    const schools = {
-        uniCourses_title: "Teknik och Ekonomi kurser, KTH (2021-2023)",
-        uniCourses_desc: "Läste några olika kurser inom datavetenskap och ekonomi, dessa kurser omfattar programmering, matematik, projektplanering etc",
-        highSchoolTitle: "Åva Gymnasium (2015-2018)",
-        highSchoolDesc: "Programmet omfattar dator och nätverksteknik, fysik, kemi, matematik, programmering, teknik och webbutveckling etc",
-    }
-    const jobs = {
-        job1_title: "Sommarpraktik på IT-avdelning, Vallentuna Kommun (2016)",
-        job1_desc: "Arbetsuppgifterna jag hade var nyinstallation av PC, rengöring av dessa, stöd vid felsökning inom PC-och Windows-miljö m.m.",
-        job2_title: "Programmerare, Ericsson (2019)",
-        job2_desc: "Under min tid på Ericsson utvecklade vi två projekt. Första projektet var en WebRTC baserad delnings applikation skrivet i Javascript biblioteket react.js. Andra projektet var en samtals system applikation för Android skrivet i Kotlin. Jobbet på Ericsson ECCC team gav mig goda kunskaper hur en IT-arbetsplats fungerar.",
-        job3_title: "Konsult, Academic Work (2020)",
-        job3_desc: "Arbetade med Flir Systems AB, ett högteknologiskt företag som montör vid tillverkning och testning av IR-kameror. Arbetsområdet var mer specifikt, produktion och testning av mindre kamera komponenter och sensorer.",
-        job4_title: "Kock, Senior Bob (2022 - Nuvarande)",
-        job4_desc: "Arbetsuppgifter omfattar tillagning och förberedelser av mat samt servering av denna. Har vid behov arbetat inom bar och dryck.",
+    const categories = {
+        education: "Utbildning",
+        work: "Arbetslivserfarenhet",
+        hobbies: "Hobby projekt",
+        links: "Länkar",
+        home: "Hem",
     }
 
-    const hobbies = { 
-        porfolio_title: "Portfolio Hemsida (2023)",
-        porfolio_desc: "Vad du ser just nu är ett av mina hobby projekt skrivet i början av 2023. Skapat och skrivet i react.js med hjälp av javascript och css.",
-    }
-
-    const links = {
-        github: "https://github.com/Tropae/portfolio",
+    const home = {
+        welcome_title: "Hej och välkommen till min portfolio hemsida!",
+        welcome_desc: 
+        "Jag heter Kevin och på denna hemsida har jag försökt samla och visa upp allt som jag har erfarit och lärt mig när det kommer till teknik och IT. " + 
+        "Personligen har jag alltid tyckt om att programmera, lösa problem som uppstår och arbeta med datorer osv. " +
+        "Jag tar ofta eget initiativ, är väldigt driven och ser gärna till att arbetet/projektet blir klart i tid som planerat.",
     }
 
     const lang = {
         root: "sv",
-        education: "Utbildning",
-        work: "Arbetslivserfarenhet",
-        hobby: "Hobby projekt",
-        otherlinks: "Länkar",
-        home: "Hem",
-        github: "GitHub",
-        welcome_title: "Välkommen till min portfolio!",
-        welcome_title_2: "Kolla gärna runt på de olika flikarna för mer info om mig. Håll muspekaren över de flygande nuggets för att äta dem om du är snabb nog!",
-        welcome_desc: "Förutom att jag är en rätt så teknisk och datorvan person så är jag även en anpassningsbar, flexibel person med god organisations och teknisk förmåga. Arbetar med noggrannhet, högt tempo och god kvalité på ett professionellt sätt.",
-        schools: schools,
-        jobs: jobs,
-        hobbies: hobbies,
+        categories: categories,
+        home: home,
+
     }
     return lang;
 }
 
 export function en(){
-    const schools = {
-        uniCourses_title: "Technology and Economics courses, KTH (2021-2023)",
-        uniCourses_desc: "Studied a few various courses in computer science and economics, these courses include programming, mathematics, project planning, etc.",
-        highSchoolTitle: "Åva High School (2015-2018)",
-        highSchoolDesc: "Courses included was computer and network technology, physics, chemistry, mathematics, programming, technology and web development etc."
+    const categories = {
+        education: "Education",
+        work: "Work experience",
+        hobbies: "Hobby projects",
+        links: "Links",
+        home: "Home",
     }
 
-    const hobbies = { 
-        porfolio_title: "Portfolio Website (2023)",
-        porfolio_desc: "What you're seeing right here has been one of my hobby projects for the start of 2023, created with react.js with the help of javascript and css.",
+    const home = {
+        welcome_title: "Hello and welcome to my portfolio website!",
+        welcome_desc: 
+        "My name is Kevin and on this website I have tried to gather and showcase everything I have experienced and learnt when it comes to technology and IT. " +
+        "I personally have always liked to code, solve problems and generally work with computers etc. " + 
+        "I oftentimes take initiative, am driven and will gladly see to it that the work/project gets done on time as planned.",
     }
-
-    const jobs = {
-        job1_title: "Summer internship at IT department, Vallentuna Municipality (2016)",
-        job1_desc: "The tasks I had were new installation of PCs, cleaning of these, support in troubleshooting within PC and Windows environment, etc.",
-        job2_title: "Developer, Ericsson (2019)",
-        job2_desc: "During my time at Ericsson, we developed two projects. The first project was a WebRTC based sharing application written in the Javascript library react.js. The second project was a call system application for Android written in Kotlin. The job at the Ericsson ECCC team gave me good knowledge of how an IT workplace works.",
-        job3_title: "Consultant, Academic Work (2020)",
-        job3_desc: "Worked with Flir Systems AB, a high-tech company as an assembler in the manufacture and testing of IR cameras. The work area was to be more specific, production and testing of smaller camera components and sensors.",
-        job4_title: "Chef, Senior Bob (2022 - Current)",
-        job4_desc: "Duties include cooking and preparing food as well as serving it. Has, if necessary, worked in the bar with drinks.",
-    }
-
 
     const lang = {
         root: "en",
-        education: "Education",
-        work: "Work experience",
-        hobby: "Hobby projects",
-        otherlinks: "Links",
-        home: "Home",
-        github: "GitHub",
-        welcome_title: "Welcome to my portfolio!",
-        welcome_desc: "In addition to being a fairly technical and computer-savvy person, I am also an adaptable, flexible person with good organizational and technical skills. Works with accuracy, fast pace and good quality in a professional manner.",
-        welcome_title_2: "Feel free to check around the different tabs for more info about me. Hover over the flying nuggets to eat them if you can catch them!",
-        schools: schools,
-        jobs: jobs,
-        hobbies: hobbies,
+        categories: categories,
+        home: home,
     }
     return lang;
 }

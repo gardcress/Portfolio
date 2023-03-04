@@ -9,7 +9,7 @@ function HeaderTitle(props){
                 marginRight: "15px",
                 cursor: "pointer"
             }} onClick={props.onClick} 
-            className={props.className === undefined ? 'unselectable' : (props.className + " unselectable")}>
+            className={props.className === undefined ? '' : (props.className)}>
                 {props.text}
             </span>
         )
@@ -19,7 +19,7 @@ function HeaderTitle(props){
             fontSize: props.size, 
             color: props.color, 
             marginRight: "15px"
-        }} onClick={props.onClick}>
+        }} onClick={props.onClick} className={props.className === undefined ? '' : (props.className)}>
             {props.text}
         </span>
     )
