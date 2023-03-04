@@ -13,6 +13,7 @@ export function sv(){
         "Jag heter Kevin och på denna hemsida har jag försökt samla och visa upp allt som jag har erfarit och lärt mig när det kommer till teknik och IT. " + 
         "Personligen har jag alltid tyckt om att programmera, lösa problem som uppstår och arbeta med datorer osv. " +
         "Jag tar ofta eget initiativ, är väldigt driven och ser gärna till att arbetet/projektet blir klart i tid som planerat.",
+        skills: "Skickligheter:",
     }
 
     const lang = {
@@ -39,6 +40,8 @@ export function en(){
         "My name is Kevin and on this website I have tried to gather and showcase everything I have experienced and learnt when it comes to technology and IT. " +
         "I personally have always liked to code, solve problems and generally work with computers etc. " + 
         "I oftentimes take initiative, am driven and will gladly see to it that the work/project gets done on time as planned.",
+        skills: "Skills:",
+
     }
 
     const lang = {
