@@ -1,5 +1,5 @@
 import './App.css';
-import HeaderBar from './components/HeaderBar.comp';
+import HeaderBar from './components/HeaderBar.component';
 import { useState, useEffect } from 'react';
 import { sv, en } from './lang.js'
 import Home from './components/Home.component';
