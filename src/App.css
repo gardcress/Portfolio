@@ -45,6 +45,40 @@ h1{
 }
 
 
+.codeBlock{
+    
+}
+
+.fadeIn {
+    animation: fadeIn ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.fadeOut{
+    animation: fadeOut ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin-right: 5px;
+    background-color: #399c2c;
+    border: 1px solid #399c2c;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .circle {
+    height: 10px;
+    width: 10px;
+    margin-right: 5px;
+    border: 1px solid #399c2c;
+    border-radius: 50%;
+    display: inline-block;
+  }
 
 .profileImage {
     display: block;
@@ -73,22 +107,23 @@ h1{
 }
 
 /*checklist*/
-.check-list {
+.checkList {
     margin: 0;
     /* padding-left: 20px; */
     padding-left: 0;
 }
   
-.check-list li {
+.checkList li {
     position: relative;
     list-style-type: none;
     padding-left: 20px;
     margin-bottom: 0.5rem;
+    margin-left: 4rem;
     transition: .3s;
     cursor: pointer;
 }
   
-.check-list li:before {
+.checkList li:before {
     content: '';
     display: block;
     position: absolute;
@@ -103,7 +138,7 @@ h1{
     transform: rotate(45deg);
   }
 
-  .check-list li:hover {
+  .checkList li:hover {
     transform: scale(1.2);
   }
 
@@ -121,5 +156,23 @@ h1{
         width: 200px;
         height: 200px;
         opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }

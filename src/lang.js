@@ -14,6 +14,19 @@ export function sv(){
         "Personligen har jag alltid tyckt om att programmera, lösa problem som uppstår och arbeta med datorer osv. " +
         "Jag tar ofta eget initiativ, är väldigt driven och ser gärna till att arbetet/projektet blir klart i tid som planerat.",
         skills: "Skickligheter:",
+        competence: "Kompetens",
+        javascript_desc: "Jag är bra på det här",
+        html_desc: "desc_sv",
+        java_desc: "desc_sv",
+        c_desc: "desc_sv",
+        bootstrap_desc: "desc_sv",
+        node_desc: "desc_sv",
+        react_desc: "desc_sv",
+        git_desc: "desc_sv",
+        linux_desc: "desc_sv",
+        dotdotdot_desc: "desc_sv",
+
+
     }
 
     const lang = {
@@ -41,6 +54,17 @@ export function en(){
         "I personally have always liked to code, solve problems and generally work with computers etc. " + 
         "I oftentimes take initiative, am driven and will gladly see to it that the work/project gets done on time as planned.",
         skills: "Skills:",
+        competence: "Competence",
+        javascript_desc: "I am great at this",
+        html_desc: "desc_en",
+        java_desc: "desc_en",
+        c_desc: "desc_en",
+        bootstrap_desc: "desc_en",
+        node_desc: "desc_en",
+        react_desc: "desc_en",
+        git_desc: "desc_en",
+        linux_desc: "desc_en",
+        dotdotdot_desc: "desc_en",
 
     }
 

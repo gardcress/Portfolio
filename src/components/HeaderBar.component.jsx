@@ -7,8 +7,8 @@ function HeaderBar(props){
     return (
         <div className="headerBar">
             <div style={{marginTop: "20px", textAlign: "center" }}>
-                <HeaderTitle text="Kevin Jäger" size="50px" color="#353836" className="unselectable"></HeaderTitle>
                 <HeaderTitle text={lang.root} size="15px" color="#353836" onClick={props.switchLang} isLink={true}></HeaderTitle>
+                <HeaderTitle text="Kevin Jäger" size="50px" color="#353836" className="unselectable"></HeaderTitle>
             </div>
             <div style={{marginTop: "20px", textAlign: "center"}}>
                 <HeaderTitle text={lang.categories.home} className={"headerTitle unselectable"} isLink={true}></HeaderTitle>
