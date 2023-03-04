@@ -25,6 +25,12 @@ function App(){
             <Home lang={lang}> </Home>
             <ButtomButton position={0} src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" link="https://github.com/Kevcodejr"></ButtomButton>
             <ButtomButton position={1} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8EZibb_PMnvz_ysNN6H-V_o-g1McCs85cjY5ArHQ&s" link="https://www.linkedin.com/in/kevin-j%C3%A4ger/"></ButtomButton>
+            <ButtomButton position={2} src={
+                lang.root === "en" ? "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/United-kingdom_flag_icon_round.svg/1200px-United-kingdom_flag_icon_round.svg.png" : 
+                "https://cdn-icons-png.flaticon.com/512/197/197564.png"
+                } onClick={switchLang}></ButtomButton>
+
+
         </div>
     )
 }
