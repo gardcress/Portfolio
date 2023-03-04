@@ -77,28 +77,34 @@ h1{
     margin: 0;
     /* padding-left: 20px; */
     padding-left: 0;
-  }
+}
   
-  .check-list li {
+.check-list li {
     position: relative;
     list-style-type: none;
     padding-left: 20px;
     margin-bottom: 0.5rem;
-  }
+    transition: .3s;
+    cursor: pointer;
+}
   
-  .check-list li:before {
-      content: '';
-      display: block;
-      position: absolute;
-      left: 0;
-      top: -2px;
-      width: 4px;
-      height: 10px;
-      border-width: 0 2px 2px 0;
-      border-style: solid;
-      border-color: green;
-      transform-origin: bottom left;
-      transform: rotate(45deg);
+.check-list li:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -2px;
+    width: 4px;
+    height: 10px;
+    border-width: 0 2px 2px 0;
+    border-style: solid;
+    border-color: green;
+    transform-origin: bottom left;
+    transform: rotate(45deg);
+  }
+
+  .check-list li:hover {
+    transform: scale(1.2);
   }
 
 

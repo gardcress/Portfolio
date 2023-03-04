@@ -16,9 +16,7 @@ function HeaderBar(props){
                 <HeaderTitle text={lang.categories.work} className={"headerTitle unselectable"} isLink={true}></HeaderTitle>
                 <HeaderTitle text={lang.categories.hobbies} className={"headerTitle unselectable"} isLink={true}></HeaderTitle>
                 <HeaderTitle text={lang.categories.links} className={"headerTitle unselectable"} isLink={true}></HeaderTitle>
-
             </div>
-
         </div>
     )
 }

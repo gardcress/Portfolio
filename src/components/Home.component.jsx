@@ -29,6 +29,7 @@ function Home(props){
                 <li>Node.js</li>
                 <li>React.js</li>
                 <li>Github (git)</li>
+                <li>Linux (ubuntu 20.04)</li>
                 <li>...</li>
             </ul></div>
 
