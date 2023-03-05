@@ -16,16 +16,16 @@ function Home(props){
 
     const codeParagraphs = [
         <div></div>,
-        <CodeParagraph className={codeClass + " homeSiding"} text={lang.javascript_desc} title="Javascript" difficulty={4} competence={lang.competence}></CodeParagraph>,
-        <CodeParagraph className={codeClass + " homeSiding"} text={lang.html_desc} title="Html / CSS" difficulty={5} competence={lang.competence}></CodeParagraph>,
-        <CodeParagraph className={codeClass + " homeSiding"} text={lang.java_desc} title="Java" difficulty={difficulty} competence={lang.competence}></CodeParagraph>,
-        <CodeParagraph className={codeClass + " homeSiding"} text={lang.c_desc} title="C# / C" difficulty={difficulty} competence={lang.competence}></CodeParagraph>,
-        <CodeParagraph className={codeClass + " homeSiding"} text={lang.bootstrap_desc} title="Bootstrap" difficulty={difficulty} competence={lang.competence}></CodeParagraph>,
-        <CodeParagraph className={codeClass + " homeSiding"} text={lang.node_desc} title="Node.js" difficulty={difficulty} competence={lang.competence}></CodeParagraph>,
-        <CodeParagraph className={codeClass + " homeSiding"} text={lang.react_desc} title="React.js" difficulty={difficulty} competence={lang.competence}></CodeParagraph>,
-        <CodeParagraph className={codeClass + " homeSiding"} text={lang.git_desc} title="Github (git)" difficulty={difficulty} competence={lang.competence}></CodeParagraph>,
-        <CodeParagraph className={codeClass + " homeSiding"} text={lang.linux_desc} title="Linux (ubuntu 20.04)" difficulty={difficulty} competence={lang.competence}></CodeParagraph>,
-        <CodeParagraph className={codeClass + " homeSiding"} text={lang.dotdotdot_desc} title="..." difficulty={difficulty} competence={lang.competence}></CodeParagraph>,
+        <CodeParagraph className={codeClass + " codeBlock homeSiding"} text={lang.javascript_desc} title="Javascript" difficulty={5} competence={lang.competence}></CodeParagraph>,
+        <CodeParagraph className={codeClass + " homeSiding"} text={lang.html_desc} title="Html / CSS / Bootstrap" difficulty={5} competence={lang.competence}></CodeParagraph>,
+        <CodeParagraph className={codeClass + " homeSiding"} text={lang.java_desc} title="Java" difficulty={5} competence={lang.competence}></CodeParagraph>,
+        <CodeParagraph className={codeClass + " homeSiding"} text={lang.c_desc} title="C# / C" difficulty={3} competence={lang.competence}></CodeParagraph>,
+        // <CodeParagraph className={codeClass + " homeSiding"} text={lang.bootstrap_desc} title="Bootstrap" difficulty={3} competence={lang.competence}></CodeParagraph>,
+        <CodeParagraph className={codeClass + " homeSiding"} text={lang.node_desc} title="Node.js" difficulty={2} competence={lang.competence}></CodeParagraph>,
+        <CodeParagraph className={codeClass + " homeSiding"} text={lang.react_desc} title="React.js" difficulty={4} competence={lang.competence}></CodeParagraph>,
+        <CodeParagraph className={codeClass + " homeSiding"} text={lang.git_desc} title="Github (git)" difficulty={3} competence={lang.competence}></CodeParagraph>,
+        <CodeParagraph className={codeClass + " homeSiding"} text={lang.linux_desc} title="Linux (ubuntu 20.04)" difficulty={2} competence={lang.competence}></CodeParagraph>,
+        <CodeParagraph className={codeClass + " homeSiding"} text={lang.dotdotdot_desc} title="..." difficulty={5} competence={lang.competence}></CodeParagraph>,
     ]
 
 
@@ -51,10 +51,10 @@ function Home(props){
                 {lang.welcome_desc}
             </p>
 
-            <p className="homeSiding" style={{fontSize: "20px", fontWeight: "bold"}}>
+            {/* <p className="homeSiding" style={{fontSize: "20px", fontWeight: "bold"}}>
                 Uppdaterar sidan, visa funktioner kanske inte fungerar som de ska, kolla gärna in senare! / 
                 Uppdating website, some functionality might not work yet, please check back in later!
-            </p>
+            </p> */}
             <p style={{fontSize: "20px", fontWeight: "bold"}}>
                 {lang.skills}
             </p>
@@ -62,15 +62,15 @@ function Home(props){
                 <ul class="checkList">
                     {/* Bug with these, they won't change lang. Nothing wrong with lang file */}
                     <li onClick={()=> setCodeParagraphId(1)}>Javascript</li>
-                    <li onClick={()=> setCodeParagraphId(2)}>Html / CSS</li>
+                    <li onClick={()=> setCodeParagraphId(2)}>Html / CSS / Bootstrap</li>
                     <li onClick={()=> setCodeParagraphId(3)}>Java</li>
                     <li onClick={()=> setCodeParagraphId(4)}>C# / C</li>
-                    <li onClick={()=> setCodeParagraphId(5)}>Bootstrap</li>
-                    <li onClick={()=> setCodeParagraphId(6)}>Node.js</li>
-                    <li onClick={()=> setCodeParagraphId(7)}>React.js</li>
-                    <li onClick={()=> setCodeParagraphId(8)}>Github (git)</li>
-                    <li onClick={()=> setCodeParagraphId(9)}>Linux (ubuntu 20.04)</li>
-                    <li onClick={()=> setCodeParagraphId(10)}>...</li>
+                    {/* <li onClick={()=> setCodeParagraphId(5)}>Bootstrap</li> */}
+                    <li onClick={()=> setCodeParagraphId(5)}>Node.js</li>
+                    <li onClick={()=> setCodeParagraphId(6)}>React.js</li>
+                    <li onClick={()=> setCodeParagraphId(7)}>Github (git)</li>
+                    <li onClick={()=> setCodeParagraphId(8)}>Linux (ubuntu 20.04)</li>
+                    <li onClick={()=> setCodeParagraphId(9)}>...</li>
                 </ul>
             </div>
             {/* <CodeParagraph className={codeClass + " homeSiding"} text={lang.javascript_desc} title={lang.javascript_title} difficulty={difficulty} competence={lang.competence}></CodeParagraph> */}

@@ -1,6 +1,6 @@
 import './App.css';
 import HeaderBar from './components/HeaderBar.component';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { sv, en } from './lang.js'
 import Home from './components/Home.component';
 import ButtomButton from './components/BottomButton.component';
@@ -16,6 +16,8 @@ function App(){
         }
     }
 
+    // const scrollTest = useRef();
+
 
 
 
@@ -29,9 +31,10 @@ function App(){
                 lang.root === "en" ? "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/United-kingdom_flag_icon_round.svg/1200px-United-kingdom_flag_icon_round.svg.png" : 
                 "https://cdn-icons-png.flaticon.com/512/197/197564.png"
                 } onClick={switchLang}></ButtomButton>
+            {/* <ButtomButton position={3} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8EZibb_PMnvz_ysNN6H-V_o-g1McCs85cjY5ArHQ&s" onClick={()=> scrollTest.current.scrollIntoView({behavior:"smooth", block: "end", inline:"nearest"})}></ButtomButton> */}
+            {/* ref={scrollTest} */}
 
-
-            <div style={{height: "200px"}}></div>
+            <div  style={{height: "200px"}}></div>
         </div>
     )
 }
