@@ -1,5 +1,5 @@
 import HeaderTitle from "./HeaderTitle.component";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import CodeParagraph from "./CodeParagraph.component";
 
 function Home(props){
@@ -8,24 +8,36 @@ function Home(props){
     const [codeTitle, setCodeTitle] = useState();
     const [codeClass, setCodeClass] = useState("fadeIn");
     const [difficulty, setDifficulty] = useState();
+    const [currentCodeParagraphId, setCodeParagraphId] = useState(0);
+    // const [codeBlock, setCodeBlock] = useState(<CodeParagraph className={codeClass + " homeSiding"} text={codeInfo} title={codeTitle} difficulty={difficulty} competence={lang.competence}></CodeParagraph>);
+    // useEffect(() => {
+        
+    // });
+
+    const codeParagraphs = [
+        <div></div>,
+        <CodeParagraph className={codeClass + " homeSiding"} text={lang.javascript_desc} title="Javascript" difficulty={4} competence={lang.competence}></CodeParagraph>,
+        <CodeParagraph className={codeClass + " homeSiding"} text={lang.html_desc} title="Html / CSS" difficulty={5} competence={lang.competence}></CodeParagraph>,
+        <CodeParagraph className={codeClass + " homeSiding"} text={lang.java_desc} title="Java" difficulty={difficulty} competence={lang.competence}></CodeParagraph>,
+        <CodeParagraph className={codeClass + " homeSiding"} text={lang.c_desc} title="C# / C" difficulty={difficulty} competence={lang.competence}></CodeParagraph>,
+        <CodeParagraph className={codeClass + " homeSiding"} text={lang.bootstrap_desc} title="Bootstrap" difficulty={difficulty} competence={lang.competence}></CodeParagraph>,
+        <CodeParagraph className={codeClass + " homeSiding"} text={lang.node_desc} title="Node.js" difficulty={difficulty} competence={lang.competence}></CodeParagraph>,
+        <CodeParagraph className={codeClass + " homeSiding"} text={lang.react_desc} title="React.js" difficulty={difficulty} competence={lang.competence}></CodeParagraph>,
+        <CodeParagraph className={codeClass + " homeSiding"} text={lang.git_desc} title="Github (git)" difficulty={difficulty} competence={lang.competence}></CodeParagraph>,
+        <CodeParagraph className={codeClass + " homeSiding"} text={lang.linux_desc} title="Linux (ubuntu 20.04)" difficulty={difficulty} competence={lang.competence}></CodeParagraph>,
+        <CodeParagraph className={codeClass + " homeSiding"} text={lang.dotdotdot_desc} title="..." difficulty={difficulty} competence={lang.competence}></CodeParagraph>,
+    ]
+
 
 
     function updateCodeBlock(text, title, diff){
-        if(codeInfo === undefined){
-            setCodeTitle(title);
-            setDifficulty(diff);
-            setCodeInfo(text);
-            return;
-        }
-
-        setCodeClass("fadeOut");
-        setTimeout(function(){
-            setCodeTitle(title);
-            setDifficulty(diff);
-            setCodeClass("fadeIn");
-            setCodeInfo(text);
-        },1000)
+        setCodeTitle(title);
+        setDifficulty(diff);
+        setCodeInfo(text);
+        console.log("Values updated")
     }
+
+    // console.log(lang.javascript_desc)
 
 
     return(
@@ -49,20 +61,20 @@ function Home(props){
             <div style={{width: "fit-content", textAlign:"left", marginLeft:"auto", marginRight: "auto"}}>
                 <ul class="checkList">
                     {/* Bug with these, they won't change lang. Nothing wrong with lang file */}
-                    <li onClick={()=> updateCodeBlock(lang.javascript_desc, "Javascript", 2)}>Javascript</li>
-                    <li onClick={()=> updateCodeBlock(lang.html_desc ,"Html / CSS", 5)}>Html / CSS</li>
-                    <li onClick={()=> updateCodeBlock(lang.java_desc ,"Java", 5)}>Java</li>
-                    <li onClick={()=> updateCodeBlock(lang.c_desc ,"C# / C", 5)}>C# / C</li>
-                    <li onClick={()=> updateCodeBlock(lang.bootstrap_desc ,"Bootstrap", 5)}>Bootstrap</li>
-                    <li onClick={()=> updateCodeBlock(lang.node_desc ,"Node.js", 5)}>Node.js</li>
-                    <li onClick={()=> updateCodeBlock(lang.react_desc ,"React.js", 5)}>React.js</li>
-                    <li onClick={()=> updateCodeBlock(lang.git_desc ,"Github (git)", 5)}>Github (git)</li>
-                    <li onClick={()=> updateCodeBlock(lang.linux_desc ,"Linux (ubuntu 20.04)", 5)}>Linux (ubuntu 20.04)</li>
-                    <li onClick={()=> updateCodeBlock(lang.dotdotdot_desc ,"...", 5)}>...</li>
+                    <li onClick={()=> setCodeParagraphId(1)}>Javascript</li>
+                    <li onClick={()=> setCodeParagraphId(2)}>Html / CSS</li>
+                    <li onClick={()=> setCodeParagraphId(3)}>Java</li>
+                    <li onClick={()=> setCodeParagraphId(4)}>C# / C</li>
+                    <li onClick={()=> setCodeParagraphId(5)}>Bootstrap</li>
+                    <li onClick={()=> setCodeParagraphId(6)}>Node.js</li>
+                    <li onClick={()=> setCodeParagraphId(7)}>React.js</li>
+                    <li onClick={()=> setCodeParagraphId(8)}>Github (git)</li>
+                    <li onClick={()=> setCodeParagraphId(9)}>Linux (ubuntu 20.04)</li>
+                    <li onClick={()=> setCodeParagraphId(10)}>...</li>
                 </ul>
             </div>
-            <CodeParagraph className={codeClass + " homeSiding"} text={codeInfo} title={codeTitle} difficulty={difficulty} competence={lang.competence}></CodeParagraph>
-
+            {/* <CodeParagraph className={codeClass + " homeSiding"} text={lang.javascript_desc} title={lang.javascript_title} difficulty={difficulty} competence={lang.competence}></CodeParagraph> */}
+            {codeParagraphs[currentCodeParagraphId]}
         </div>
     )
 }
