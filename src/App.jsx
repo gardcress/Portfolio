@@ -34,6 +34,8 @@ function App(){
             {/* <ButtomButton position={3} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8EZibb_PMnvz_ysNN6H-V_o-g1McCs85cjY5ArHQ&s" onClick={()=> scrollTest.current.scrollIntoView({behavior:"smooth", block: "end", inline:"nearest"})}></ButtomButton> */}
             {/* ref={scrollTest} */}
 
+            <p style={{textAlign: "center", textDecoration: "underline"}}>Jag håller på att uppdatera sidan, visa funktioner kanske inte fungerar, kom gärna tillbaka lite senare!
+            / I'm currently updating the website, some functionality might not work, please come back a bit later!</p>
             <div  style={{height: "200px"}}></div>
         </div>
     )
