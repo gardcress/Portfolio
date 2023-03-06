@@ -6,6 +6,7 @@ function HeaderTitle(props){
             <span style={{
                 fontSize: props.size, 
                 color: props.color, 
+                textAlign: props.textAlign,
                 marginRight: "15px",
                 cursor: "pointer"
             }} onClick={props.onClick} 
@@ -17,6 +18,7 @@ function HeaderTitle(props){
     return (
         <span style={{
             fontSize: props.size, 
+            textAlign: props.textAlign,
             color: props.color, 
             marginRight: "15px"
         }} onClick={props.onClick} className={props.className === undefined ? '' : (props.className)}>

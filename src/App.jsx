@@ -35,6 +35,9 @@ function App() {
 
   const homeScroll = useRef();
   const eduScroll = useRef();
+  const hobbyScroll = useRef();
+  const workScroll = useRef();
+
   function scrollTo(ref) {
     ref.current.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
   }
@@ -44,14 +47,28 @@ function App() {
 
   return (
     <div className='app' style={{ backgroundColor: rgbBackgroundColor }}>
+      <HeaderBar lang={lang} switchLang={switchLang}
+        homeClick={() => scrollTo(homeScroll)} 
+        workClick={() => scrollTo(workScroll)} 
+        hobbyClick={() => scrollTo(hobbyScroll)} 
+        eduClick={() => scrollTo(eduScroll)}
+      ></HeaderBar>
       <div style={{ height: "1px" }}></div>
-      <HeaderBar lang={lang} switchLang={switchLang} homeClick={()=> scrollTo(homeScroll)} eduClick={() => scrollTo(eduScroll)}></HeaderBar>
+
       {/* <div style={{height: "1000px"}}></div> */}
 
       <div ref={homeScroll}>
         <Home lang={lang}> </Home>
       </div>
-      
+
+      <div ref={workScroll}>
+
+      </div>
+
+      <div ref={hobbyScroll}>
+
+      </div>
+
       <div ref={eduScroll}>
 
       </div>
