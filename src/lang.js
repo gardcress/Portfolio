@@ -12,7 +12,7 @@ export function sv(){
         welcome_desc: 
         "Jag heter Kevin och på denna hemsida har jag försökt samla och visa upp allt som jag har erfarit och lärt mig när det kommer till teknik och IT. " + 
         "Personligen har jag alltid tyckt om att programmera, lösa problem som uppstår och arbeta med datorer osv. " +
-        "Jag tar ofta eget initiativ, är väldigt driven och ser gärna till att arbetet/projektet blir klart i tid som planerat.",
+        "Jag tar ofta eget initiativ, är väldigt driven och hittar gärna på nya projekt att göra på min fritid.",
         skills: "Skickligheter:",
         competence: "Kompetens",
         javascript_desc: 
@@ -41,7 +41,7 @@ export function sv(){
         "Jag har även pysslat med att säkra linux servern med hjälp av program som fail2ban och IPTables för att skydda portarna etc. " +
         "Skript/program skrevs i både shell och java. Jag känner mig ganska säker på att använda linux och dess kommandopanel. ",
         dotdotdot_desc: 
-        "Jag är alltid glad och angelägen att lära mig nya saker, i bra tid. " +
+        "Jag är alltid glad och angelägen att lära mig nya saker. " +
         "Om det krävs en ny färdighet för att lösa ett problem, lär jag mig gärna den. " +
         "För mig finns det inga gränser när det kommer till att lösa problem. ",
     }
@@ -69,7 +69,7 @@ export function en(){
         welcome_desc: 
         "My name is Kevin and on this website I have tried to gather and showcase everything I have experienced and learnt when it comes to technology and IT. " +
         "I personally have always liked to code, solve problems and generally work with computers etc. " + 
-        "I oftentimes take initiative, am driven and will gladly see to it that the work/project gets done on time as planned.",
+        "I oftentimes take initiative, am driven and happily create new fun projects on my free time.",
         skills: "Skills:",
         competence: "Competence",
         javascript_desc: 
@@ -98,7 +98,7 @@ export function en(){
         "I've also tinkered with securing the linux server using programs such as fail2ban and IPTables to protect the ports etc. " +
         "Scripts/programs was written in both shell and java. I feel fairly confident in using linux and it's commandpanel. ",
         dotdotdot_desc: 
-        "I'm always happy and eager to learn new things, in a timely manner. " +
+        "I'm always happy and eager to learn new things. " +
         "If there's a new skill required to solve a problem, I'm happy to learn it. " +
         "For me, there are no limits when it comes to solving problems. ",
     }

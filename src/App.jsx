@@ -9,8 +9,8 @@ import { PROPERTY_TYPES } from '@babel/types';
 function App() {
   const [lang, setLang] = useState(sv);
   const [rgbBackgroundColor, setRgbBackgroundColor] = useState("rgb(230, 255, 255, 1)");
-  const [rgbValue, setRgbValue] = useState(1);
-  const [oldScroll, setOldScroll] = useState(0);
+  // const [rgbValue, setRgbValue] = useState(1);
+  // const [oldScroll, setOldScroll] = useState(0);
   function switchLang() {
     if (lang.root === "en") {
       setLang(sv);
@@ -21,7 +21,7 @@ function App() {
   }
 
   function onScroll(event) {
-    setOldScroll(event.target.documentElement.scrollTop);
+    // setOldScroll(event.target.documentElement.scrollTop);
     let value = 1 - ((event.target.documentElement.scrollTop) / 1000);
     setRgbBackgroundColor("rgb(230, 255, 255, " + value + ")");
   }
@@ -33,21 +33,8 @@ function App() {
 
 
 
-
-
-
-
-
-
   const homeScroll = useRef();
   const eduScroll = useRef();
-  function scrollToHome() {
-    homeScroll.current.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" })
-  }
-  function scrollToEducation() {
-    scrollTo(eduScroll);
-  }
-
   function scrollTo(ref) {
     ref.current.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
   }
@@ -56,14 +43,15 @@ function App() {
 
 
   return (
-    <div className='app' style={{backgroundColor: rgbBackgroundColor}}>
+    <div className='app' style={{ backgroundColor: rgbBackgroundColor }}>
       <div style={{ height: "1px" }}></div>
-      <HeaderBar lang={lang} switchLang={switchLang} homeClick={scrollToHome} eduClick={() => scrollTo(eduScroll)}></HeaderBar>
+      <HeaderBar lang={lang} switchLang={switchLang} homeClick={()=> scrollTo(homeScroll)} eduClick={() => scrollTo(eduScroll)}></HeaderBar>
       {/* <div style={{height: "1000px"}}></div> */}
 
       <div ref={homeScroll}>
         <Home lang={lang}> </Home>
       </div>
+      
       <div ref={eduScroll}>
 
       </div>
