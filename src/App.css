@@ -3,10 +3,15 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;600&display=swap');
 body {
-    background-color: #f7fffb;
+    /* background-color: #f7fffb; */
     /* font-family: 'Comfortaa', cursive; */
     /* text-align: center; */
     font-family: 'Golos Text', sans-serif;
+    background-image: url("https://cdn.pixabay.com/photo/2016/12/01/20/17/texture-1876097_960_720.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: top;
 }
 
 .app {
@@ -36,12 +41,12 @@ body {
 
 
 ::-webkit-scrollbar-thumb {
-    background: rgb(159, 209, 216);
+    background: rgb(159, 190, 194);
     border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgb(34, 121, 131);
+    background: rgb(118, 143, 146);
 }
 
 h1 {
