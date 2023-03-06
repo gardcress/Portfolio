@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Dancing+Script:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;600&display=swap');
 body {
     background-color: #f7fffb;
-    font-family: 'Comfortaa', cursive;
+    /* font-family: 'Comfortaa', cursive; */
     /* text-align: center; */
+    font-family: 'Golos Text', sans-serif;
 }
 
 .app {
