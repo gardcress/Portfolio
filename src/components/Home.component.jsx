@@ -44,7 +44,7 @@ function Home(props){
         <div className="home" style={{textAlign: "center"}}>
             <img className="profileImage" src='https://media.licdn.com/dms/image/D4D03AQEkmjvEnpTsrw/profile-displayphoto-shrink_400_400/0/1673964306866?e=1683158400&v=beta&t=9QHBZE6PcfmGHdt5Ubtutwlga-Xx_CuzhsuIRZXE8Xc'></img>
             <div className="homeSiding">
-                <HeaderTitle className="" size="25px" text={lang.welcome_title}></HeaderTitle>
+                <HeaderTitle className="sectionTitle" text={lang.welcome_title}></HeaderTitle>
             </div>
             
             <p className="homeTitle homeSiding">
