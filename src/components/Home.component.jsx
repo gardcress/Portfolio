@@ -24,7 +24,7 @@ function Home(props){
         <CodeParagraph className={codeClass + " homeSiding"} text={lang.node_desc} title="Node.js" difficulty={2} competence={lang.competence}></CodeParagraph>,
         <CodeParagraph className={codeClass + " homeSiding"} text={lang.react_desc} title="React.js" difficulty={4} competence={lang.competence}></CodeParagraph>,
         <CodeParagraph className={codeClass + " homeSiding"} text={lang.git_desc} title="Github (git)" difficulty={3} competence={lang.competence}></CodeParagraph>,
-        <CodeParagraph className={codeClass + " homeSiding"} text={lang.linux_desc} title="Linux (ubuntu 20.04)" difficulty={2} competence={lang.competence}></CodeParagraph>,
+        <CodeParagraph className={codeClass + " homeSiding"} text={lang.linux_desc} title="Linux (ubuntu 20.04)" difficulty={3} competence={lang.competence}></CodeParagraph>,
         <CodeParagraph className={codeClass + " homeSiding"} text={lang.dotdotdot_desc} title="..." difficulty={5} competence={lang.competence}></CodeParagraph>,
     ]
 

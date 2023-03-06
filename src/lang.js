@@ -29,16 +29,21 @@ export function sv(){
         c_desc: 
         "Förr i tiden så kodade jag egna datorspel i C#, i skolan använda jag mig också av C# för att testa anti-virus program för att se hur säkra de var. " +
         "Det var ett tag sedan jag kodade i C# eller C så jag skulle kunna tänka mig att det tar ungefär en vecka tills jag kommer in i ett bra arbetsflöde. ",
-        node_desc: "desc_sv",
-        react_desc: "desc_sv",
-        git_desc: "desc_sv",
-        linux_desc: "desc_sv",
+        node_desc: 
+        "Jag har använt node.js för att installera och köra kod och appar inom all möjliga projekt, jag vet grunderna för att installera och köra kod med node.js. ",
+        react_desc: 
+        "Jag har kodat en del i projekt hos Ericsson men också egna projekt som denna hemsida i react.js. " +
+        "Jag är rätt så bekväm med och tycker det är roligt att koda inom react.js och skapa olika komponenter etc. ",
+        git_desc: "Jag är rätt så erfaren att använda git och github, dock så har jag en liten brist på erfarenhet att jobb med/i olika branches (grenar).",
+        linux_desc: 
+        "Under det föregående året har jag arbetat en del med linux programvara, främst i ubuntu 20.04. " +
+        "På denna linux maskin har jag kört spelserver mjukvara och en webbserver/sida, och skapat skript och kod för att göra det möjligt för att andra människor att använda sig av servern. " +
+        "Jag har även pysslat med att säkra linux servern med hjälp av program som fail2ban och IPTables för att skydda portarna etc. " +
+        "Skript/program skrevs i både shell och java. Jag känner mig ganska säker på att använda linux och dess kommandopanel. ",
         dotdotdot_desc: 
         "Jag är alltid glad och angelägen att lära mig nya saker, i bra tid. " +
         "Om det krävs en ny färdighet för att lösa ett problem, lär jag mig gärna den. " +
         "För mig finns det inga gränser när det kommer till att lösa problem. ",
-
-
     }
 
     const lang = {
@@ -81,15 +86,21 @@ export function en(){
         c_desc: 
         "In the past I've coded in C# when creating my own games, in school I also used this language to test security software protection. " +
         "It's been a while since I've coded with C# or C so I would imagine it would take about a week to get back into a good workflow. ",
-        node_desc: "desc_en",
-        react_desc: "desc_en",
-        git_desc: "desc_en",
-        linux_desc: "desc_en",
+        node_desc: 
+        "I've used node.js to install and run code and apps in my various projects, I know the basics of installing packages and running code with node.js. ",
+        react_desc: 
+        "I've coded a fair bit with react.js in projects at Ericsson but also in hobby projects such as this website. " +
+        "I'm quite comfortable and think it's fun to code with react.js and create new various components etc. ",
+        git_desc: "I'm fairly experienced using git and github though I lack some experience working with/in different branches.",
+        linux_desc: 
+        "In the previous year I've been working a fair bit with linux software, primarily ubuntu 20.04. " +
+        "On this linux machine I've been running game server software and a web server/page, and been creating scripts and code to make it able to run for the public to use. " +
+        "I've also tinkered with securing the linux server using programs such as fail2ban and IPTables to protect the ports etc. " +
+        "Scripts/programs was written in both shell and java. I feel fairly confident in using linux and it's commandpanel. ",
         dotdotdot_desc: 
         "I'm always happy and eager to learn new things, in a timely manner. " +
         "If there's a new skill required to solve a problem, I'm happy to learn it. " +
         "For me, there are no limits when it comes to solving problems. ",
-
     }
 
     const lang = {
