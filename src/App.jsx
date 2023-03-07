@@ -3,6 +3,7 @@ import HeaderBar from './components/HeaderBar.component';
 import { useState, useEffect, useRef } from 'react';
 import { sv, en } from './lang.js'
 import Home from './components/Home.component';
+import Work from './components/Work.component';
 import ButtomButton from './components/BottomButton.component';
 import { PROPERTY_TYPES } from '@babel/types';
 
@@ -53,16 +54,17 @@ function App() {
         hobbyClick={() => scrollTo(hobbyScroll)} 
         eduClick={() => scrollTo(eduScroll)}
       ></HeaderBar>
-      <div style={{ height: "1px" }}></div>
+      <div ref={homeScroll} style={{ height: "1px" }}></div>
 
       {/* <div style={{height: "1000px"}}></div> */}
 
-      <div ref={homeScroll}>
+      <div>
         <Home lang={lang}> </Home>
       </div>
+      <hr ref={workScroll} style={{marginLeft: "auto", marginRight: "auto", width: "80%", }}></hr>
 
-      <div ref={workScroll}>
-
+      <div>
+        <Work lang={lang}></Work>
       </div>
 
       <div ref={hobbyScroll}>

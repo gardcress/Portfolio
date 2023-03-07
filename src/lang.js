@@ -46,10 +46,22 @@ export function sv(){
         "För mig finns det inga gränser när det kommer till att lösa problem. ",
     }
 
+    const work = {
+        job1_title: "Sommarpraktik på IT-avdelning, Vallentuna Kommun (2016)",
+        job1_desc: "Arbetsuppgifterna jag hade var nyinstallation av PC, rengöring av dessa, stöd vid felsökning inom PC-och Windows-miljö m.m.",
+        job2_title: "Programmerare, Ericsson (2019)",
+        job2_desc: "Under min tid på Ericsson utvecklade vi två projekt. Första projektet var en WebRTC baserad delnings applikation skrivet i Javascript biblioteket react.js. Andra projektet var en samtals system applikation för Android skrivet i Kotlin. Jobbet på Ericsson ECCC team gav mig goda kunskaper hur en IT-arbetsplats fungerar.",
+        job3_title: "Konsult, Academic Work (2020)",
+        job3_desc: "Arbetade med Flir Systems AB, ett högteknologiskt företag som montör vid tillverkning och testning av IR-kameror. Arbetsområdet var mer specifikt, produktion och testning av mindre kamera komponenter och sensorer.",
+        job4_title: "Kock, Senior Bob (2022 - Nuvarande)",
+        job4_desc: "Arbetsuppgifter omfattar tillagning och förberedelser av mat samt servering av denna. Har vid behov arbetat inom bar och dryck.",
+    }
+
     const lang = {
         root: "sv",
         categories: categories,
         home: home,
+        work: work,
 
     }
     return lang;
@@ -103,10 +115,23 @@ export function en(){
         "For me, there are no limits when it comes to solving problems. ",
     }
 
+    const work = {
+        job1_title: "Summer internship at IT department, Vallentuna Municipality (2016)",
+        job1_desc: "The tasks I had were new installation of PCs, cleaning of these, support in troubleshooting within PC and Windows environment, etc.",
+        job2_title: "Developer, Ericsson (2019)",
+        job2_desc: "During my time at Ericsson, we developed two projects. The first project was a WebRTC based sharing application written in the Javascript library react.js. The second project was a call system application for Android written in Kotlin. The job at the Ericsson ECCC team gave me good knowledge of how an IT workplace works.",
+        job3_title: "Consultant, Academic Work (2020)",
+        job3_desc: "Worked with Flir Systems AB, a high-tech company as an assembler in the manufacture and testing of IR cameras. The work area was to be more specific, production and testing of smaller camera components and sensors.",
+        job4_title: "Chef, Senior Bob (2022 - Current)",
+        job4_desc: "Duties include cooking and preparing food as well as serving it. Has, if necessary, worked in the bar with drinks.",
+    }
+
     const lang = {
         root: "en",
         categories: categories,
         home: home,
+        work: work,
+
     }
     return lang;
 }
