@@ -57,11 +57,17 @@ export function sv(){
         job4_desc: "Arbetsuppgifter omfattar tillagning och förberedelser av mat samt servering av denna. Har vid behov arbetat inom bar och dryck.",
     }
 
+    const hobbies = { 
+        porfolio_title: "Portfolio Hemsida (2023)",
+        porfolio_desc: "Vad du ser just nu är ett av mina hobby projekt skrivet i början av 2023. Skapat och skrivet i react.js med hjälp av javascript och css.",
+    }
+
     const lang = {
         root: "sv",
         categories: categories,
         home: home,
         work: work,
+        hobbies: hobbies,
 
     }
     return lang;
@@ -126,11 +132,17 @@ export function en(){
         job4_desc: "Duties include cooking and preparing food as well as serving it. Has, if necessary, worked in the bar with drinks.",
     }
 
+    const hobbies = { 
+        porfolio_title: "Portfolio Website (2023)",
+        porfolio_desc: "What you're seeing right here has been one of my hobby projects for the start of 2023, created with react.js with the help of javascript and css.",
+    }
+
     const lang = {
         root: "en",
         categories: categories,
         home: home,
         work: work,
+        hobbies: hobbies,
 
     }
     return lang;

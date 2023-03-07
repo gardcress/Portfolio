@@ -6,10 +6,11 @@ import Home from './components/Home.component';
 import Work from './components/Work.component';
 import ButtomButton from './components/BottomButton.component';
 import { PROPERTY_TYPES } from '@babel/types';
+import Hobby from './components/Hobby.component';
 
 function App() {
   const [lang, setLang] = useState(sv);
-  const [rgbBackgroundColor, setRgbBackgroundColor] = useState("rgb(230, 255, 255, 1)");
+  const [rgbBackgroundColor, setRgbBackgroundColor] = useState("rgb(240, 255, 255, 1)");
   // const [rgbValue, setRgbValue] = useState(1);
   // const [oldScroll, setOldScroll] = useState(0);
   function switchLang() {
@@ -24,7 +25,7 @@ function App() {
   function onScroll(event) {
     // setOldScroll(event.target.documentElement.scrollTop);
     let value = 1 - ((event.target.documentElement.scrollTop) / 1000);
-    setRgbBackgroundColor("rgb(230, 255, 255, " + value + ")");
+    setRgbBackgroundColor("rgb(240, 255, 255, " + value + ")");
   }
 
   useEffect(() => {
@@ -66,12 +67,16 @@ function App() {
       <div>
         <Work lang={lang}></Work>
       </div>
+      <hr ref={hobbyScroll} style={{marginLeft: "auto", marginRight: "auto", width: "80%", }}></hr>
 
-      <div ref={hobbyScroll}>
 
+      <div>
+        <Hobby lang={lang}></Hobby>
       </div>
+      <hr ref={eduScroll} style={{marginLeft: "auto", marginRight: "auto", width: "80%", }}></hr>
 
-      <div ref={eduScroll}>
+
+      <div>
 
       </div>
 
