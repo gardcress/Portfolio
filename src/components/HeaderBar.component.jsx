@@ -20,7 +20,7 @@ function HeaderBar(props){
                 <HeaderTitle text={lang.categories.work} className={"headerTitle unselectable"} isLink={true} onClick={props.workClick}></HeaderTitle>
                 <HeaderTitle text={lang.categories.hobbies} className={"headerTitle unselectable"} isLink={true} onClick={props.hobbyClick}></HeaderTitle>
                 <HeaderTitle text={lang.categories.education} className={"headerTitle unselectable"} isLink={true} onClick={props.eduClick}></HeaderTitle>
-                <HeaderTitle text={lang.categories.links} className={"headerTitle unselectable"} isLink={true}></HeaderTitle>
+                <HeaderTitle text={lang.categories.contactme} className={"headerTitle unselectable"} isLink={true} onClick={props.contactClick}></HeaderTitle>
                 {/* <hr></hr> */}
         </div>
         

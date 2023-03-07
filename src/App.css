@@ -98,13 +98,19 @@ h1 {
     user-select: none;
 }
 
-.buttomButton {
+.bottomButton {
     position: fixed;
     width: 40px;
     height: 40px;
     bottom: 0;
     right: 0;
     margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.endButton {
+    width: 40px;
+    height: 40px;
     cursor: pointer;
 }
 
@@ -167,6 +173,38 @@ h1 {
         margin-right: auto;
     }
 }
+
+.categoryMarginRight {
+    margin-right: 40%;
+}
+
+.categoryMarginLeft {
+    margin-left: 40%;
+}
+
+.leftAlign {
+    text-align: left;
+}
+.rightAlign {
+    text-align: right;
+}
+
+@media screen and (max-width: 1000px) {
+    .categoryMarginRight {
+        margin-right: 0;
+    }
+    .categoryMarginLeft {
+        margin-left: 0;
+    }
+    .leftAlign {
+        text-align: center;
+    }
+    .rightAlign {
+        text-align: center;
+    }
+}
+
+
 
 
 /*checklist*/

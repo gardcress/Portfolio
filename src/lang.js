@@ -4,6 +4,7 @@ export function sv(){
         work: "Arbetslivserfarenhet",
         hobbies: "Hobby projekt",
         links: "Länkar",
+        contactme: "Kontakta mig",
         home: "Hem",
     }
 
@@ -60,6 +61,16 @@ export function sv(){
     const hobbies = { 
         porfolio_title: "Portfolio Hemsida (2023)",
         porfolio_desc: "Vad du ser just nu är ett av mina hobby projekt skrivet i början av 2023. Skapat och skrivet i react.js med hjälp av javascript och css.",
+        server_title: "Server operatör (2021-2022)",
+        server_desc: "Under ca 1,5 år har jag bedrivit en hobby verksamhet där jag bedrev en spelserver med ungefär 5-40 användare per dag. " +
+        "Server kördes med hjälp av ett linux operativ system och använde sig av olika shell script, flertal olika program och java plugins/applikationer för att fungera korrekt.",
+    }
+
+    const schools = {
+        uniCourses_title: "Teknik och Ekonomi kurser, KTH (2021-2023)",
+        uniCourses_desc: "Läste några olika kurser inom datavetenskap och ekonomi, dessa kurser omfattar programmering, matematik, projektplanering etc",
+        highSchoolTitle: "Åva Gymnasium (2015-2018)",
+        highSchoolDesc: "Programmet omfattar dator och nätverksteknik, fysik, kemi, matematik, programmering, teknik och webbutveckling etc",
     }
 
     const lang = {
@@ -68,6 +79,8 @@ export function sv(){
         home: home,
         work: work,
         hobbies: hobbies,
+        schools: schools,
+
 
     }
     return lang;
@@ -79,6 +92,7 @@ export function en(){
         work: "Work experience",
         hobbies: "Hobby projects",
         links: "Links",
+        contactme: "Contact me",
         home: "Home",
     }
 
@@ -121,6 +135,13 @@ export function en(){
         "For me, there are no limits when it comes to solving problems. ",
     }
 
+    const schools = {
+        uniCourses_title: "Technology and Economics courses, KTH (2021-2023)",
+        uniCourses_desc: "Studied a few various courses in computer science and economics, these courses include programming, mathematics, project planning, etc.",
+        highSchoolTitle: "Åva High School (2015-2018)",
+        highSchoolDesc: "Courses included was computer and network technology, physics, chemistry, mathematics, programming, technology and web development etc."
+    }
+
     const work = {
         job1_title: "Summer internship at IT department, Vallentuna Municipality (2016)",
         job1_desc: "The tasks I had were new installation of PCs, cleaning of these, support in troubleshooting within PC and Windows environment, etc.",
@@ -135,6 +156,10 @@ export function en(){
     const hobbies = { 
         porfolio_title: "Portfolio Website (2023)",
         porfolio_desc: "What you're seeing right here has been one of my hobby projects for the start of 2023, created with react.js with the help of javascript and css.",
+        server_title: "Server operator (2021-2022)",
+        server_desc: 
+        "For about 1,5 years I've ran a small hobby business where I was running a game server with about 5-40 users per day. " +
+        "The server was ran on a linux operating system and used different shell scripts, other various programs and java plugins/applications to run correctly.",
     }
 
     const lang = {
@@ -143,6 +168,7 @@ export function en(){
         home: home,
         work: work,
         hobbies: hobbies,
+        schools: schools,
 
     }
     return lang;

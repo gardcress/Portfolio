@@ -50,7 +50,7 @@ function Work(props){
     // }
 
     return(
-        <div className="homeSiding" style={{textAlign: "left", marginTop: "60px", marginRight: "40%"}}>
+        <div className="homeSiding categoryMarginRight leftAlign" style={{marginTop: "60px"}}>
             <HeaderTitle className="sectionTitle" text={props.lang.categories.work}></HeaderTitle>
             {/* <p>Test</p> */}
             {/* <Entry title="test" desc="desc"></Entry> */}

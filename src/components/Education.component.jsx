@@ -2,8 +2,8 @@ import HeaderTitle from "./HeaderTitle.component";
 import Entry from "./Entry.component";
 
 
-function Hobby(props) {
-    const lang = props.lang.hobbies;
+function Education(props) {
+    const lang = props.lang.schools;
     const entryCompArray = [];
     let titleReader = "";
     let descReader = "";
@@ -25,11 +25,11 @@ function Hobby(props) {
     }
 
     return (
-        <div className="homeSiding categoryMarginLeft rightAlign" style={{marginTop: "60px"}}>
-            <HeaderTitle className="sectionTitle" text={props.lang.categories.hobbies}></HeaderTitle>
+        <div className="homeSiding categoryMarginRight leftAlign" style={{marginTop: "60px"}}>
+            <HeaderTitle className="sectionTitle" text={props.lang.categories.education}></HeaderTitle>
             {entryCompArray}
         </div>
     )
 }
 
-export default Hobby;
+export default Education;
