@@ -7,7 +7,7 @@ function HeaderBar(props){
     return (
         <div className="headerNavbar" style={{textAlign: "center", position: "fixed"}}>
                 
-                <HeaderTitle text="Kevin Jäger" size="40px" color="#353836" className="unselectable"></HeaderTitle>
+                <HeaderTitle text="Kevin Jäger" size="40px" color="#353836" className="unselectable" marginRight="15px"></HeaderTitle>
 
                  {/* <div className="headerBar"> */}
             {/* <div style={{marginTop: "20px", textAlign: "center" }}>
@@ -16,11 +16,11 @@ function HeaderBar(props){
             </div> */}
             
          {/* </div> */}
-                <HeaderTitle text={lang.categories.home} className={"headerTitle unselectable"} isLink={true} onClick={props.homeClick}></HeaderTitle>
-                <HeaderTitle text={lang.categories.work} className={"headerTitle unselectable"} isLink={true} onClick={props.workClick}></HeaderTitle>
-                <HeaderTitle text={lang.categories.hobbies} className={"headerTitle unselectable"} isLink={true} onClick={props.hobbyClick}></HeaderTitle>
-                <HeaderTitle text={lang.categories.education} className={"headerTitle unselectable"} isLink={true} onClick={props.eduClick}></HeaderTitle>
-                <HeaderTitle text={lang.categories.contactme} className={"headerTitle unselectable"} isLink={true} onClick={props.contactClick}></HeaderTitle>
+                <HeaderTitle text={lang.categories.home} className={"headerTitle unselectable hideNavbarTitle"} isLink={true} onClick={props.homeClick}></HeaderTitle>
+                <HeaderTitle text={lang.categories.work} className={"headerTitle unselectable hideNavbarTitle"} isLink={true} onClick={props.workClick}></HeaderTitle>
+                <HeaderTitle text={lang.categories.hobbies} className={"headerTitle unselectable hideNavbarTitle"} isLink={true} onClick={props.hobbyClick}></HeaderTitle>
+                <HeaderTitle text={lang.categories.education} className={"headerTitle unselectable hideNavbarTitle"} isLink={true} onClick={props.eduClick}></HeaderTitle>
+                <HeaderTitle text={lang.categories.contactme} className={"headerTitle unselectable hideNavbarTitle"} isLink={true} onClick={props.contactClick}></HeaderTitle>
                 {/* <hr></hr> */}
         </div>
         

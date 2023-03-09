@@ -8,12 +8,12 @@ function ButtomButton(props){
 
     if(props.onClick !== undefined){
         return(
-            <img className="bottomButton" src={props.src} style={{marginRight: newPosition + "px"}} onClick={props.onClick}></img>
+            <img className={"bottomButton unselectable " + props.className} src={props.src} style={{marginRight: newPosition + "px"}} onClick={props.onClick}></img>
         )
     }
 
     return (
-        <img className="bottomButton" src={props.src} style={{marginRight: newPosition + "px"}} onClick={openLink}></img> 
+        <img className={"bottomButton unselectable " + props.className} src={props.src} style={{marginRight: newPosition + "px"}} onClick={openLink}></img> 
     )
 }
 

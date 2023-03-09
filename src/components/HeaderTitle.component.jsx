@@ -7,7 +7,7 @@ function HeaderTitle(props){
                 fontSize: props.size, 
                 color: props.color, 
                 textAlign: props.textAlign,
-                marginRight: "15px",
+                marginRight: props.marginRight,
                 cursor: "pointer"
             }} onClick={props.onClick} 
             className={props.className === undefined ? '' : (props.className)}>
@@ -20,7 +20,7 @@ function HeaderTitle(props){
             fontSize: props.size, 
             textAlign: props.textAlign,
             color: props.color, 
-            marginRight: "15px"
+            marginRight: props.marginRight,
         }} onClick={props.onClick} className={props.className === undefined ? '' : (props.className)}>
             {props.text}
         </span>
