@@ -13,7 +13,7 @@ import Dot from './components/Dot.component';
 
 function App() {
   const [lang, setLang] = useState(sv);
-  const [rgbBackgroundColor, setRgbBackgroundColor] = useState("rgb(240, 255, 255, 0.8)");
+  const [rgbBackgroundColor, setRgbBackgroundColor] = useState("rgb(240, 255, 255, 0.9)");
 
   // const [rgbValue, setRgbValue] = useState(1);
   // const [oldScroll, setOldScroll] = useState(0);
@@ -29,7 +29,7 @@ function App() {
   function onScroll(event) {
     // setOldScroll(event.target.documentElement.scrollTop);
     let value = 1 - ((event.target.documentElement.scrollTop) / 1000);
-    if (value > 0.8) {
+    if (value > 0.9) {
       return;
     }
     // let value = (event.target.documentElement.scrollTop) / 1000;
